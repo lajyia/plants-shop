@@ -1,0 +1,10 @@
+.modal{
+    @apply top-0 left-0 absolute flex right-0 bottom-0 items-start justify-center bg-gray-400 bg-black bg-opacity-30;
+}
+.modal__container{
+    @apply p-[25px] bg-white relative
+}
+
+.modal_body{
+    @apply relative
+}

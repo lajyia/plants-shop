@@ -1,0 +1,56 @@
+.header{
+
+    @apply h-[94px] flex items-center;
+
+    &__container{
+        @apply flex justify-between border-b-2 border-gray-100 border-solid pb-[15px];
+    }
+
+    &__logo{
+        
+    }
+    &__navigation{
+        @apply flex items-center;
+    }
+    &__info{
+        @apply flex justify-between items-center;
+    }
+    &__navigation_item_list{
+        @apply mr-[50px] text-[16px] hover:font-bold relative;
+    }
+    &__navigation_item_list:last-child{
+        @apply mr-0
+    }
+    &__navigation_item_list::after{
+        content: '';
+        position: absolute;
+        width: 0%;
+        background: #46A358;
+        height: 2px;
+        bottom: 0;
+        left: 0;
+        transform: translateY(26px);
+    }
+    &__navigation_item_list:hover::after{
+        width: 100%;
+        transition: .3s all ease;
+    }
+    &__navigation_list{
+        @apply flex items-center;
+    }
+    &__magnifier{
+        @apply mr-[30px]
+    }
+    &__shop_box{
+        @apply mr-[30px]   
+    }
+    &__login{
+        @apply flex items-center leading-[35px] rounded-[7px] bg-green-600 cursor-pointer px-[20px];
+    }
+    &__login > img{
+        @apply mr-[5px]
+    }
+    &__text_login{
+        @apply text-white font-medium text-[18px];
+    }
+}

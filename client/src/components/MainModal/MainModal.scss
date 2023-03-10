@@ -1,0 +1,133 @@
+.main-modal{
+    user-select: none;
+}
+
+.main-modal .modal-input input{
+    @apply w-full;
+}
+
+.main-modal .modal-input{
+    @apply mb-[17px]
+}
+
+.main-modal .modal-container{
+    @apply flex-grow-0 flex-shrink basis-full max-w-[500px] py-[60px] px-[100px];
+}
+
+.main-modal .modal-body{
+    @apply pt-[160px];
+}
+
+
+.main-modal__input-password input{
+    @apply tracking-[5px] placeholder:tracking-normal pr-[35px]
+}
+
+.main-modal .modal-container:after{
+    content: '';
+    width: 100%;
+    height: 13px;
+    background: #398b4a;
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+}
+
+
+.main-modal__close-image{
+    padding: 10px;
+    cursor: pointer;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+}
+
+.main-modal__close-image img{
+    width: 15px;
+    height: 15px;
+}
+
+.main-modal .button{
+    @apply w-full mb-[40px] leading-[45px]
+}
+
+.main-modal__switch-panel {
+    @apply flex justify-center mb-[50px] items-center
+}
+.main-modal__login-switch {
+    
+}
+
+.main-modal__switch-item{
+    @apply text-[20px] cursor-pointer
+}
+
+.main-modal__split-switch {
+    @apply px-[20px]
+}
+
+.main-modal__switch-item-active{
+    @apply text-green-600
+}
+
+
+.main-modal__register-switch {
+}
+.main-modal__form {
+}
+.main-modal__title-form {
+    @apply text-slate-700 mb-[14px]
+}
+.main-modal__forgot-form {
+    @apply text-right mb-[27px] text-green-600;
+}
+.main-modal__variable-login {
+}
+.main-modal__variable-title {
+    @apply text-center text-slate-700 mb-[27px] relative
+}
+
+.main-modal__variable-title:before{
+    content: '';
+    position: absolute;
+    width: 25%;
+    height: 2px;
+    background: #EAEAEA;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+}
+
+.main-modal__variable-title::after{
+    content: '';
+    position: absolute;
+    width: 25%;
+    height: 2px;
+    background: #EAEAEA;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+}
+
+
+.main-modal-variable{
+    @apply border border-solid border-gray-200 flex items-center justify-center leading-[40px] rounded-[7px] cursor-pointer
+}
+
+.main-modal__variable-body {
+}
+.main-modal__google-variable {
+    @apply mb-[15px]
+}
+.main-modal__image-google {
+    @apply mr-[15px]
+}
+.main-modal__title-google {
+}
+.main-modal__facebook-variable {
+}
+.main-modal__image-facebook {
+    @apply mr-[5px]
+}
+.main-modal__title-facebook {
+}
