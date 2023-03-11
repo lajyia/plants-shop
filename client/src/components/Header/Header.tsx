@@ -19,7 +19,7 @@ const Header: FC = () => {
 
 
     return (
-        <div className={styles.header}>
+        <header className={styles.header}>
             <div className={`${styles.header__container} container`}>
                 <div className={styles.header__logo}>
                     <img src={Logo} alt="logo" />
@@ -53,7 +53,7 @@ const Header: FC = () => {
                     </div>
                 </div>
             </div>
-        </div>
+        </header>
     );
 };
 

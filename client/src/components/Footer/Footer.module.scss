@@ -1,0 +1,133 @@
+.footer{
+    @apply bg-gray-100 bg-opacity-30;
+}
+
+.footer_top{
+    @apply flex items-center
+}
+
+.footer_body_top{
+    @apply flex
+}
+
+.footer_notification{
+
+}
+.footer_text_body_top{
+    @apply max-w-[204px] leading-[22px] text-gray-400
+}
+.footer_image_item_body{
+    @apply mb-[18px]
+}
+
+.footer_title_body_top{
+    @apply text-[17px] font-[600] mb-[10px] text-gray-900
+}
+
+.footer_item_body_top{
+    @apply mr-[62px]
+}
+
+.footer_title_notification{
+    @apply mb-[20px]
+}
+.footer_text_notification{
+    @apply max-w-[355px] leading-[22px] text-gray-400 text-[13px]
+}
+
+.footer_email_notification{
+    @apply flex mb-[17px]
+}
+
+.footer_email_notification button{
+    border-radius: 0 8px 8px 0;
+    @apply text-[18px] font-bold
+}
+
+.footer_email_notification input{
+    @apply placeholder:text-[13px] lowercase w-full
+}
+.footer_email_notification_input{
+    flex: 0 1 80%
+}
+
+.footer_top{
+    @apply flex justify-between p-[25px]
+}
+
+.footer_title_notification{
+    @apply font-bold text-[18px] leading-[16px] text-gray-900
+}
+.footer_address_notification{
+    @apply flex justify-between;
+}
+
+.footer_address_notification img{
+    @apply mr-[10px]
+}
+
+.footer_contacts{
+    @apply flex justify-between items-center p-[25px] bg-blue-200 bg-opacity-30
+}
+
+
+.footer_email_notification img{
+    @apply mr-[10px]
+}
+
+.footer_phone_notification{
+    @apply flex items-center
+}
+
+.footer_phone_notification img{
+    @apply mr-[10px]
+}
+
+.footer_mail_notification{
+    @apply flex items-center
+}
+
+.footer_email_notification img{
+    @apply mr-[10px]
+}
+
+.footer_bottom{
+    @apply flex justify-between py-[32px] bg-gray-100 bg-opacity-30 pl-[15px]
+}
+
+.footer_list_social_info{
+    @apply flex justify-between
+}
+
+.footer_item_social_info{
+    @apply p-[10px] border border-green-200 border-solid rounded-[5px] mr-[10px]
+}
+
+.footer_title_social_info{
+    @apply mb-[20px]
+}
+
+.footer_title_accept_info{
+    @apply mb-[12px]
+}
+
+.footer_social_info{
+    @apply mb-[33px]
+}
+
+.footer_item_list_account{
+    @apply mb-[15px]
+}
+.footer_title_account{
+    @apply mb-[15px]
+}
+.footer_title_help{
+    @apply mb-[15px]
+}
+.footer_title_categories{
+    @apply mb-[15px]
+}
+
+.footer_sub_bottom{
+    @apply h-[50px] bg-white flex items-center justify-center
+}

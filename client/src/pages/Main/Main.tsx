@@ -4,6 +4,7 @@ import styles from './Main.module.scss';
 import Poster from './images/poster.png';
 import Button from '../../components/UI/Button/Button';
 import MainModal from '../../components/MainModal/MainModal';
+import Footer from '../../components/Footer/Footer';
 
 
 
@@ -24,6 +25,7 @@ const Main: FC = () => {
                         <img src={Poster} alt="poster" />
                     </div>
                 </div>
+                <Footer/>
             </div>
         </div>
     );

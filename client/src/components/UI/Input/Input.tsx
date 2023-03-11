@@ -1,65 +1,47 @@
-import React, { FC } from 'react';
+import React, { FC, useState } from 'react';
 import styles from './Input.module.scss';
 import Eye from './images/eye.svg';
 import OpenEye from './images/open-eye.svg';
+import './Input.scss';
 
 
 interface InputProps {
     placeholder?: string;
     type: string;
-    focus?: (focus: boolean) => void;
-    isFocus?: boolean;
-    show?: boolean;
-    setShow?: (show: boolean) => void;
 }
 
-const Input: FC<InputProps> = ({ placeholder, type, focus, isFocus, show, setShow }) => {
+const Input: FC<InputProps> = ({ placeholder, type }) => {
 
 
-    const focusOnPassword = () => {
-        if (focus) {
-            focus(true);
+    const [show, setShow] = useState<boolean>(false);
+
+    const rootInputImageClasses = [styles.input_image];
+
+    const focusPassword = () =>{
+        if (type == "password"){
+
+            rootInputImageClasses.push('visible');
         }
     }
 
-
-    const rootInputClasses = [styles.input];
-
-    if (isFocus) {
-        rootInputClasses.push(styles.input_focus);
+    const showPassword = () => {
+        setShow(true);
     }
-
-    const showPassword = () =>{
-        if(setShow){
-            setShow(true);
-        }
-        
-    }
-    const unShowPassword = () =>{
-        if (setShow){
-            setShow(false);
-        }
-    }
-
-    const focusInput = () =>{
-        if (focus){
-            focusOnPassword();
-        }
-        
+    const unShowPassword = () => {
+        setShow(false);
     }
 
     return (
-        <div onClick={focusOnPassword} className={`${styles.body_input} modal-input`}>
-            <input onFocus={focusInput} type={show ? 'text' : type} placeholder={placeholder} className={rootInputClasses.join(' ')} />
-            {type == 'password'
+        <div className={`${styles.body_input} modal-input`}>
+            <input onFocus={focusPassword} type={show ? 'text' : type} placeholder={placeholder} className={`${styles.input} input`} />
+
+            {type === 'password'
                 ? <div>
                     {show
-                        ? <img onClick={unShowPassword} className={isFocus ? styles.input_image_visible : styles.input_image} src={OpenEye} alt="open eye"/>
-                        : <img onClick={showPassword} className={isFocus ? styles.input_image_visible : styles.input_image} src={Eye} alt="eye" />
+                        ? <img onClick={unShowPassword} className={rootInputImageClasses.join(' ')} src={OpenEye} alt="open eye" />
+                        : <img onClick={showPassword} className={rootInputImageClasses.join(' ')} src={Eye} alt="eye" />
                     }
-                    
                 </div>
-                
                 : <div></div>
             }
 
