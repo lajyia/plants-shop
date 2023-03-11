@@ -87,20 +87,20 @@
     @apply flex items-center
 }
 
-.footer_email_notification img{
+.footer_mail_notification img{
     @apply mr-[10px]
 }
 
 .footer_bottom{
-    @apply flex justify-between py-[32px] bg-gray-100 bg-opacity-30 pl-[15px]
+    @apply flex justify-between py-[32px] bg-gray-100 bg-opacity-30 pl-[25px] border-solid border-gray-200 border-b-2
 }
 
 .footer_list_social_info{
-    @apply flex justify-between
+    @apply flex 
 }
 
 .footer_item_social_info{
-    @apply p-[10px] border border-green-200 border-solid rounded-[5px] mr-[10px]
+    @apply p-[10px] border border-green-200 border-solid rounded-[5px] mr-[5px]
 }
 
 .footer_title_social_info{
@@ -130,4 +130,20 @@
 
 .footer_sub_bottom{
     @apply h-[50px] bg-white flex items-center justify-center
+}
+
+.footer_account{
+    flex: 0 1 25%;
+}
+.footer_help{
+    flex: 0 1 25%;
+}
+.footer_info{
+    flex: 0 1 25%;
+}
+.footer_categories{
+    flex: 0 1 25%;
+}
+.footer_top_text_address_notification{
+    @apply mb-[7px]
 }

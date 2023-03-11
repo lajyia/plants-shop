@@ -1,0 +1,50 @@
+.categories{
+    @apply flex justify-between py-[50px] 
+}
+
+
+.categories button{
+    @apply flex items-center
+}
+.categories_text_button {
+    @apply mr-[10px]
+}
+
+.categories_title_body{
+    @apply uppercase max-w-[150px] font-extrabold text-[18px] text-right leading-[24px] mb-[10px]
+}
+
+.categories_text_body{
+    @apply max-w-[292px] text-right leading-[24px] text-gray-400 mb-[22px]
+}
+
+.categories_body_left_block{
+    @apply flex flex-col items-end justify-center
+}
+.categories_body_right_block{
+    @apply flex flex-col items-end justify-center
+}
+
+.categories_left_block{
+    @apply flex justify-center bg-gray-100 bg-opacity-30 relative pr-[20px] mr-[40px];
+}
+.categories_right_block{
+    @apply flex justify-between bg-gray-100 bg-opacity-30 relative pr-[20px];
+}
+
+.categories_image_left_block img{
+    @apply bg-gray-100 bg-opacity-30;
+}
+
+.categories_image_decorative{
+    position: absolute;
+    left: 10px;
+    bottom: 10px;
+}
+.categories_image_left_block{
+    transform: translateX(30px);
+}
+
+.categories_image_right_block{
+    transform: translateX(30px);
+}
