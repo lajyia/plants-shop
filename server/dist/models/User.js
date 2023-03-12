@@ -8,7 +8,9 @@ const User = new mongoose_1.Schema({
     city: { type: String },
     address: { type: String },
     number: { type: Number },
-    name: { type: String, required: true },
-    surname: { type: String, required: true }
+    name: { type: String },
+    surname: { type: String },
+    nickname: { type: String, required: true, unique: true },
+    roles: [{ type: String, ref: 'Role' }]
 });
 exports.default = (0, mongoose_1.model)("User", User);

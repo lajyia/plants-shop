@@ -16,8 +16,9 @@ const express_1 = __importDefault(require("express"));
 const cors_1 = __importDefault(require("cors"));
 const dotenv_1 = __importDefault(require("dotenv"));
 const mongoose_1 = __importDefault(require("mongoose"));
-const registrationRouter_1 = __importDefault(require("./routers/registrationRouter"));
 const postRouter_1 = __importDefault(require("./routers/postRouter"));
+const authRouter_1 = __importDefault(require("./routers/authRouter"));
+const rolesRouter_1 = __importDefault(require("./routers/rolesRouter"));
 dotenv_1.default.config();
 const app = (0, express_1.default)();
 const PORT = process.env.PORT;
@@ -26,8 +27,9 @@ const PASSWORD_DB = process.env.PASSWORD_DB;
 const NAME_DB = process.env.NAME_DB;
 app.use((0, cors_1.default)());
 app.use(express_1.default.json());
-app.use('/api/registration', registrationRouter_1.default);
+app.use('/api/auth', authRouter_1.default);
 app.use('/api/post', postRouter_1.default);
+app.use('/api/roles', rolesRouter_1.default);
 app.use('/posts', express_1.default.static('uploads/post'));
 const start = () => __awaiter(void 0, void 0, void 0, function* () {
     try {
