@@ -3,6 +3,7 @@ import cors from 'cors';
 import dotenv from 'dotenv';
 import mongoose from 'mongoose';
 import registrationRouter from './routers/registrationRouter';
+import postRouter from './routers/postRouter';
 
 
 
@@ -20,8 +21,11 @@ app.use(cors());
 app.use(express.json());
 
 
-app.use('/registration', registrationRouter);
+app.use('/api/registration', registrationRouter);
+app.use('/api/post', postRouter);
 
+
+app.use('/posts', express.static('uploads/post'))
 
 const start = async () =>{
     try{

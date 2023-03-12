@@ -5,6 +5,8 @@ import MainModal from '../../components/MainModal/MainModal';
 import Footer from '../../components/Footer/Footer';
 import MainPoster from '../../components/MainPoster/MainPoster';
 import Categories from '../../components/Categories/Categories';
+import BlogPost from '../../components/BlogPost/BlogPost';
+
 
 
 const Main: FC = () => {
@@ -15,6 +17,7 @@ const Main: FC = () => {
                 <MainModal/>
                 <MainPoster/>
                 <Categories/>
+                <BlogPost/>
                 <Footer/>
             </div>
         </div>

@@ -13,6 +13,11 @@ exports.registrationController = void 0;
 class registrationController {
     registration(req, res) {
         return __awaiter(this, void 0, void 0, function* () {
+            try {
+            }
+            catch (e) {
+                console.log(e);
+            }
             const { email, password } = req.query;
         });
     }

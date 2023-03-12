@@ -1,0 +1,21 @@
+.admin_aside{
+    @apply bg-blue-200 bg-opacity-30 w-[80%] p-[20px]
+}
+.admin_aside{
+    margin: 0 auto;
+}
+
+.admin_list_aside{
+    @apply flex justify-between px-[20px]
+}
+.admin_item_list{
+    
+}
+
+.admin_item_list:last-child{
+    @apply mr-0
+}
+
+.admin_item_list > a{
+    @apply text-[18px]
+}

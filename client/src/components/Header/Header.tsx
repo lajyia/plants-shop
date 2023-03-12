@@ -22,7 +22,9 @@ const Header: FC = () => {
         <header className={styles.header}>
             <div className={`${styles.header__container} container`}>
                 <div className={styles.header__logo}>
-                    <img src={Logo} alt="logo" />
+                    <Link to="/">
+                        <img src={Logo} alt="logo" />
+                    </Link>
                 </div>
                 <nav className={styles.header__navigation}>
                     <ul className={styles.header__navigation_list}>

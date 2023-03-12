@@ -1,0 +1,12 @@
+.blog_post{
+    @apply py-[40px]
+}
+.blog_body{
+    @apply text-center
+}
+.blog_title{
+    @apply text-[30px] font-bold mb-[15px]
+}
+.blog_text{
+    @apply text-gray-400
+}
