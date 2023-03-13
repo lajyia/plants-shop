@@ -1,5 +1,11 @@
 .main-modal{
     user-select: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    overflow: scroll;
 }
 
 .main-modal .modal-input input{
@@ -134,4 +140,7 @@
 
 .main-modal__input-confirm-password{
     @apply mb-[40px]
+}
+.main-modal__input-confirm-password input{
+    @apply tracking-[5px] placeholder:tracking-normal pr-[35px]
 }

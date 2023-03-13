@@ -12,7 +12,8 @@ const BlogPost: FC = () => {
             time: '6',
             title: 'dfj',
             body: 'dji',
-            picture: 'sfojif'
+            picture: 'sfojif',
+            _id: 'rkkkd'
         }
     ]
 

@@ -8,38 +8,57 @@ import './Input.scss';
 interface InputProps {
     placeholder?: string;
     type: string;
+    onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void
 }
 
-const Input: FC<InputProps> = ({ placeholder, type }) => {
+const Input: FC<InputProps> = ({ placeholder, type, onChange }) => {
 
 
     const [show, setShow] = useState<boolean>(false);
+    const [isFocusPassword, setIsFocusPassword] = useState<boolean>(false);
 
-    const rootInputImageClasses = [styles.input_image];
 
-    const focusPassword = () =>{
-        if (type == "password"){
-
-            rootInputImageClasses.push('visible');
-        }
-    }
 
     const showPassword = () => {
+
         setShow(true);
+
+
     }
     const unShowPassword = () => {
+
         setShow(false);
+
     }
+
+    const focusPassword = () => {
+
+        if (type === 'password') {
+            setIsFocusPassword(true);
+        }
+
+    }
+    const unFocusPassword = () => {
+
+        setTimeout(() => {
+            if (type === 'password') {
+                setIsFocusPassword(false);
+            }
+        }, 100)
+
+    }
+
+
 
     return (
         <div className={`${styles.body_input} modal-input`}>
-            <input onFocus={focusPassword} type={show ? 'text' : type} placeholder={placeholder} className={`${styles.input} input`} />
+            <input onBlur={unFocusPassword} onFocus={focusPassword} onChange={onChange} type={show ? 'text' : type} placeholder={placeholder} className={`${styles.input} input`} />
 
             {type === 'password'
-                ? <div>
+                ? <div className={isFocusPassword ? 'input_image_visible' : 'input_image'}>
                     {show
-                        ? <img onClick={unShowPassword} className={rootInputImageClasses.join(' ')} src={OpenEye} alt="open eye" />
-                        : <img onClick={showPassword} className={rootInputImageClasses.join(' ')} src={Eye} alt="eye" />
+                        ? <img onClick={unShowPassword} className={`${styles.input_image}`} src={OpenEye} alt="open eye" />
+                        : <img onClick={showPassword} className={`${styles.input_image}`} src={Eye} alt="eye" />
                     }
                 </div>
                 : <div></div>

@@ -64,12 +64,16 @@ const MainModal: FC = () => {
 
 
     if (!visibleModal) {
+        document.body.classList.remove('lock');
+
         return (
             <div></div>
         )
     }
 
-
+    if (visibleModal) {
+        document.body.classList.add('lock');
+    }
 
     return (
         <div className="main-modal">
@@ -139,7 +143,7 @@ const MainModal: FC = () => {
                             <Input type="password" placeholder='password' />
                         </div>
                         <div onClick={stopInputPropagation} className="main-modal__input-confirm-password">
-                            <Input type="password" placeholder='confirm password'/>
+                            <Input type="password" placeholder='confirm password' />
                         </div>
                         <Button formAuth={formAuth}>Register</Button>
                     </form>

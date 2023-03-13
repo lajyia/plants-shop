@@ -13,7 +13,7 @@ const BlogPostList:FC<BlogPostListProps> = ({posts}) => {
     return (
         <div>
             {posts.map(post => 
-                <BlogPostItem post={post}/>
+                <BlogPostItem key={post._id} post={post}/>
             )}
         </div>
     );

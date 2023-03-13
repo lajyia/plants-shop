@@ -1,5 +1,5 @@
 .admin_aside{
-    @apply bg-blue-200 bg-opacity-30 w-[80%] p-[20px]
+    @apply bg-blue-200 bg-opacity-30 p-[20px] max-w-[1200px]
 }
 .admin_aside{
     margin: 0 auto;
@@ -10,6 +10,12 @@
 }
 .admin_item_list{
     
+}
+
+.admin_item_list:hover{
+    text-decoration: underline;
+    color: rgb(148, 134, 134);
+    font-weight: 900;
 }
 
 .admin_item_list:last-child{

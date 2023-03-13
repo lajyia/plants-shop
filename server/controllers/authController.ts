@@ -6,8 +6,6 @@ import jwt from 'jsonwebtoken';
 import Role from '../models/Role';
 
 
-const SECRET_KEY = process.env.JWT_SECRET;
-
 export class AuthController {
     async registration(req: Request, res: Response) {
 
@@ -104,10 +102,13 @@ export class AuthController {
                         return res.json({ message: false });
                     }
 
-                    if (SECRET_KEY) {
+
+                    const JWT_SECRET = process.env.JWT_SECRET;
+
+                    if (JWT_SECRET) {
                         const token = jwt.sign({
                             id: user._id,
-                        }, SECRET_KEY, { expiresIn: '30d' })
+                        }, JWT_SECRET, { expiresIn: '30d' })
 
                         return res.json({message: true, token})
                     }

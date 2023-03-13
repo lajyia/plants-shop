@@ -15,6 +15,10 @@ body{
     color: #3D3D3D
 }
 
+body.lock{
+    overflow: hidden;
+}
+
 .container{
     @apply max-w-[1200px] my-0 mx-auto
 }

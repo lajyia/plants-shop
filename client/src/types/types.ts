@@ -4,4 +4,5 @@ export interface IPost{
     title: string;
     body: string;
     picture: string;
+    _id: string
 }

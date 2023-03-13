@@ -10,8 +10,6 @@ interface BlogPostItemProps{
 
 const BlogPostItem: FC<BlogPostItemProps> = ({post}) => {
 
-    console.log(post);
-
     return (
         <div>
             

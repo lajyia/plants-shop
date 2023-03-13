@@ -17,7 +17,6 @@ const User_1 = __importDefault(require("../models/User"));
 const bcrypt_1 = __importDefault(require("bcrypt"));
 const jsonwebtoken_1 = __importDefault(require("jsonwebtoken"));
 const Role_1 = __importDefault(require("../models/Role"));
-const SECRET_KEY = process.env.JWT_SECRET;
 class AuthController {
     registration(req, res) {
         return __awaiter(this, void 0, void 0, function* () {
@@ -82,10 +81,11 @@ class AuthController {
                         if (!isLogin) {
                             return res.json({ message: false });
                         }
-                        if (SECRET_KEY) {
+                        const JWT_SECRET = process.env.JWT_SECRET;
+                        if (JWT_SECRET) {
                             const token = jsonwebtoken_1.default.sign({
                                 id: user._id,
-                            }, SECRET_KEY, { expiresIn: '30d' });
+                            }, JWT_SECRET, { expiresIn: '30d' });
                             return res.json({ message: true, token });
                         }
                         return res.json({ message: 'Error key' });

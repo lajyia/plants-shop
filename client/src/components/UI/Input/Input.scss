@@ -1,14 +1,29 @@
-.input_image_visible{
-    display: block !important;
-}
-
 .input {
     border: 1px solid #eaeaea;
     border-radius: 5px;
     padding: 10px 15px;
-    @apply placeholder:capitalize placeholder:text-[16px]
+    @apply placeholder:capitalize placeholder:text-[16px];
 }
 
-.input:focus{
-    border: 1px solid #46A358;
+.input:focus {
+    border: 1px solid #46a358;
+}
+
+
+.input_image_visible{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 10px;
+    display: block;
+    cursor: pointer;
+}
+
+.input_image {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 10px;
+    display: none;
+    cursor: pointer;
 }
