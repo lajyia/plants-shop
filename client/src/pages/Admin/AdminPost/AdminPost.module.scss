@@ -1,0 +1,85 @@
+.admin_post{
+    @apply flex justify-between p-[30px]    
+}
+
+.admin_post_form{
+    @apply flex flex-col
+}
+
+.admin_post_preview{
+    flex: 0 1 50%;
+    min-width: 520px;
+    @apply pt-[14px]
+}
+
+.admin_post_create{
+    flex: 0 1 50%;
+    min-width: 520px;
+    margin-right: 30px;
+}
+
+.admin_post textarea{
+    resize: none !important;
+    overflow: hidden;
+    line-height: 22px;
+    color: #727272;
+}
+.admin_create_post_title{
+    border: 1px solid #46A358 !important;
+    @apply mb-[20px] p-[10px] text-[20px] font-bold block
+}
+
+.admin_preview_title{
+    @apply text-[20px] font-bold mb-[10px]
+}
+
+.admin_preview_title::first-letter{
+    @apply uppercase
+}
+.admin_post_title input{
+    @apply w-full
+}
+
+.admin_post_body textarea{
+    @apply w-full h-[220px]
+}
+
+.admin_post_body{
+    @apply mb-[20px]
+}
+
+.admin_preview_body{
+    color: #727272;
+    overflow-wrap:break-word;
+    line-height: 22px;
+    overflow-y: auto;
+    max-height: 220px;
+}
+
+.admin_post_image input{
+    @apply hidden
+}
+
+.admin_post_image{
+    @apply flex justify-between
+}
+.admin_post_image_body{
+    @apply flex items-center
+}
+
+.admin_post_title_image{
+    @apply mr-[10px]
+}
+
+.admin_post_image label{
+    background: #455a49;
+    @apply text-white font-bold cursor-pointer rounded-[6px] leading-[30px] px-[5px]
+}
+
+.admin_preview_image{
+    @apply flex justify-center mb-[15px]
+}
+
+.admin_preview_image img{
+    max-height: 400px;
+}

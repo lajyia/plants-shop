@@ -2,12 +2,14 @@ import React, { FC } from 'react';
 import styles from './Textarea.module.scss';
 
 interface TextareaProps{
-    onChange: (e: React.ChangeEvent<HTMLTextAreaElement>) => void
+    onChange: (e: React.ChangeEvent<HTMLTextAreaElement>) => void;
+    value: string,
+    spellCheck: boolean
 }
 
-const Textarea:FC<TextareaProps> = ({onChange}) => {
+const Textarea:FC<TextareaProps> = ({onChange, value, spellCheck}) => {
     return (
-        <textarea onChange={onChange} className={styles.textarea}></textarea>
+        <textarea spellCheck={spellCheck} value={value} onChange={onChange} className={styles.textarea}></textarea>
     );
 };
 

@@ -18,7 +18,8 @@ const App: FC = () => {
     <div>
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Main/>}/>
+          <Route path="/" element={<Navigate to="/home"/>}/>
+          <Route path="/home" element={<Main/>}/>
           <Route path="/admin" element={<Navigate to="/admin/users"/>}/>
           <Route path='/admin/posts' element={<AdminPosts/>}/>
           <Route path='/admin/users' element={<AdminUsers/>}/>

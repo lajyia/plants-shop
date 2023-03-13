@@ -49,6 +49,8 @@ const MainModal: FC = () => {
     const formAuth = async (e: React.MouseEvent<HTMLButtonElement>) => {
         e.preventDefault();
 
+        
+
     }
 
 
